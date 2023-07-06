@@ -1,0 +1,11 @@
+{
+  "git": {
+      "commitMessage": "chore: release v${version}"
+  },
+  "npm": {
+      "publish": true
+  },
+  "publishConfig": {
+      "registry": "私服地址"
+  }
+}
