@@ -31,3 +31,7 @@ koidpu@snapmail.cc
 # 使用 rollup 打造自己的 npm 包 (全流程)
 [使用 rollup 打造自己的 npm 包 (全流程)](https://juejin.cn/post/6950557086916804645#heading-5)
 
+
+# VuePress 搭建组件库文档
+[VuePress 搭建组件库文档](https://juejin.cn/post/7064746265266880549)
+
