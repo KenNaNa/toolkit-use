@@ -11,6 +11,10 @@
   "author": "kennana",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.7"
   }
 }
