@@ -12,3 +12,16 @@
 
  # rollup 工具包
  [使用rollup构建工具包](https://juejin.cn/post/7043617707421335588)
+
+
+ (node:32436) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[!] RollupError: Node tried to load your configuration file as CommonJS even though it is likely an ES module. To resolve this, change the extension of your configuration to ".mjs", set "type": "module" in your package.json file or pass the "--bundleConfigAsCjs" flag.
+
+
+koidpu@snapmail.cc
+
+
+# rollup 工具包发包
+[rollup 工具包发包](https://juejin.cn/post/7030456121810747429#heading-7)
+

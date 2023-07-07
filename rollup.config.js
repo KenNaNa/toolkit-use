@@ -1,8 +1,8 @@
-import babel from "@rollup/plugin-babel"; // 引入 babel
-import commonjs from "@rollup/plugin-commonjs"; // 引入 cjs 插件
-import { nodeResolve  } from "@rollup/plugin-node-resolve"; // 引入 resolve
-import typescript from "rollup-plugin-typescript2"; // 引入 ts
-import { terser } from "rollup-plugin-terser"; // 压缩打包文件
+const babel = require("@rollup/plugin-babel"); // 引入 babel
+const commonjs = require("@rollup/plugin-commonjs"); // 引入 cjs 插件
+const { nodeResolve  } = require("@rollup/plugin-node-resolve"); // 引入 resolve
+const typescript = require("rollup-plugin-typescript2"); // 引入 ts
+const { terser } = require("rollup-plugin-terser"); // 压缩打包文件
 
 const extensions = ['.js', '.ts'];
 

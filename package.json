@@ -1,12 +1,12 @@
 {
   "name": "toolkit-use",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "a npm toolkit use for vue.js and react",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
   "module": "dist/index.esm.js",
   "scripts": {
-    "build": "rimraf dist/* && rollup -c",
+    "build": "rimraf dist/ && rollup -c",
     "babel": "babel ./src/index.js -o ./dist/index.js",
     "test": "jest",
     "release": "release-it",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/cli": "^7.22.6",
     "@babel/core": "^7.22.6",
+    "@babel/plugin-transform-runtime": "^7.22.7",
     "@babel/preset-env": "^7.22.6",
     "@babel/preset-typescript": "^7.22.5",
     "@rollup/plugin-babel": "^6.0.3",
@@ -42,7 +43,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.6",
+    "clipboard": "^2.0.11",
     "core-js": "^3.31.1",
-    "rimraf": "^5.0.1"
+    "rimraf": "^4"
   }
 }
