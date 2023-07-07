@@ -2,7 +2,6 @@ module.exports = {
   title: 'toolkituse | a npm package for work',
   description: 'a npm toolkit use docs',
   base: '/toolkit-use/',
-  theme: '@vuepress/blog',
   themeConfig: {
     logo: '/logo.png',
     nav: [
