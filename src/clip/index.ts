@@ -1,5 +1,5 @@
 import ClipboardJS from "clipboard";
-import { ToolkitUseClipboardOptions } from "./type";
+import { ToolkitUseClipboardOptions } from "../../types/clip";
 /**
  * @description: 自定义复制功能
  * @return {*}

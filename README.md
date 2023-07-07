@@ -25,3 +25,9 @@ koidpu@snapmail.cc
 # rollup 工具包发包
 [rollup 工具包发包](https://juejin.cn/post/7030456121810747429#heading-7)
 
+
+[!] RollupError: Could not resolve "./clip/index" from "src/index.ts" src/in
+
+# 使用 rollup 打造自己的 npm 包 (全流程)
+[使用 rollup 打造自己的 npm 包 (全流程)](https://juejin.cn/post/6950557086916804645#heading-5)
+
