@@ -20,21 +20,102 @@ const banner =
     ` * Released under the ${license} License.\n` +
     ' */';
 
+
+const buildInputs = () => {
+  const arr = [
+    'src/index.ts',
+    'src/array/index.ts',
+    'src/clip/index.ts',
+    'src/decimal/index.ts',
+    'src/download/index.ts',
+    'src/string/index.ts',
+  ]
+}
+
+const buildOutputs = () => {}
+
 module.exports = {
-  input: 'src/index.ts',
+  input: [
+    'src/index.ts',
+    'src/array/index.ts',
+    'src/clip/index.ts',
+    'src/decimal/index.ts',
+    'src/download/index.ts',
+    'src/string/index.ts',
+  ],
   output: [
     {
-      file: 'dist/index.umd.js',
-      format: 'umd',
-      name: 'toolkitUse',
-      banner,
+      dir: 'dist',
+      file: 'index.esm.js',
+      format: 'esm',
+      name: 'index',
     },
     {
-      file: 'dist/index.esm.js',
+      dir: 'dist',
+      file: 'index.umd.js',
+      format: 'umd',
+      name: 'index',
+    },
+    {
+      dir: 'dist',
+      file: 'array/index.esm.js',
       format: 'esm',
-      name: 'toolkitUse',
-      banner,
-    }
+      name: 'array',
+    },
+    {
+      dir: 'dist',
+      file: 'array/index.umd.js',
+      format: 'umd',
+      name: 'array',
+    },
+    {
+      dir: 'dist',
+      file: 'clip/index.esm.js',
+      format: 'esm',
+      name: 'clip',
+    },
+    {
+      dir: 'dist',
+      file: 'clip/index.umd.js',
+      format: 'umd',
+      name: 'clip',
+    },
+    {
+      dir: 'dist',
+      file: 'decimal/index.esm.js',
+      format: 'esm',
+      name: 'decimal',
+    },
+    {
+      dir: 'dist',
+      file: 'decimal/index.umd.js',
+      format: 'umd',
+      name: 'decimal',
+    },
+    {
+      dir: 'dist',
+      file: 'download/index.esm.js',
+      format: 'esm',
+      name: 'download',
+    },
+    {
+      dir: 'dist',
+      file: 'download/index.umd.js',
+      format: 'umd',
+      name: 'download',
+    },
+    {
+      dir: 'dist',
+      file: 'string/index.esm.js',
+      format: 'esm',
+      name: 'string',
+    },
+    {
+      dir: 'dist',
+      file: 'string/index.umd.js',
+      format: 'umd',
+      name: 'string',
+    },
   ],
   plugins: [
     nodeResolve({
