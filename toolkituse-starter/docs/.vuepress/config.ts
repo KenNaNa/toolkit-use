@@ -9,18 +9,18 @@ module.exports = {
       {
         text: 'versions',
         items: [
-          { text: '0.0.4', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.4', target: '_blank' },
-          { text: '0.0.3', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.3', target: '_blank' },
-          { text: '0.0.2', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.2', target: '_blank' },
-          { text: '0.0.1', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.1', target: '_blank' },
+          { text: '0.0.9', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.9', target: '_blank' },
+          { text: '0.0.8', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.8', target: '_blank' },
+          { text: '0.0.7', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.7', target: '_blank' },
+          { text: '0.0.6', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.6', target: '_blank' },
         ]
       },
       {
         text: 'more',
         items: [
           { text: 'github', link: 'https://github.com/KenNaNa/toolkit-use', target: '_blank' },
-          { text: 'twitter', link: 'https://twitter.com/jkl12345781138', target: '_blank' },
-          { text: 'preview', link: 'https://kennana.github.io/toolkit-use/', target: '_blank' },
+          { text: 'twitter', link: 'https://twitter.com/Toolkituse', target: '_blank' },
+          { text: 'preview', link: 'https://kennana.github.io/toolkit-use', target: '_blank' },
         ]
       }
     ],

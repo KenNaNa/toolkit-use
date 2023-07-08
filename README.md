@@ -30,3 +30,24 @@ ToolkitUse is a commonly used toolkit for front-end developers, offering a rich 
 npm i toolkit-use
 ```
 
+## usage
+
+```vue
+<script setup lang='ts'>
+import { 
+  ToolkitUseClipboard, 
+  ToolkitUseClipboardOptions,
+  uniqueOptionsArr,
+  uniqueValueArr,
+  deepClone,
+  formatDate,
+  transformDecimal,
+  toPercent,
+  toPoint,
+  frontUrlDownload,
+  dataStreamDownloadExcelOrPdf,
+  padStartZero,
+} from 'toolkit-use'
+</script>
+```
+

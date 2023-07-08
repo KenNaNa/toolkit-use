@@ -4,7 +4,7 @@ import { ToolkitUseClipboardOptions } from "../../types/clip";
  * @description: 自定义复制功能
  * @return {*}
  */
-export class ToolkitUseClipboard {
+class ToolkitUseClipboard {
   private _data: string = ''
   private _class: string = ''
   private _clipboard: Clipboard
@@ -35,4 +35,9 @@ export class ToolkitUseClipboard {
 
     return this._clipboard
   }
+}
+
+export {
+  ToolkitUseClipboardOptions,
+  ToolkitUseClipboard
 }
