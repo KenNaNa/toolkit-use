@@ -48,3 +48,14 @@
   return percent
 }
 
+/**
+ * @description: 将百分比转成小数
+ * @param {string} percent 百分比
+ * @param {number} i 保留几位小数
+ * @return {*}
+ */
+export const toPoint = (percent: string, i: number) => {
+  let str = percent.replace('%', '')
+  const aaa = Number(str) / 100
+  return transformDecimal(aaa, i)
+}

@@ -4,7 +4,7 @@
  * @param {string} uniKey 唯一的key
  * @return {*}
  */
- export const uniqueArr = (arr: any[], uniKey: string) => {
+ export const uniqueOptionsArr = (arr: any[], uniKey: string) => {
   const obj: any = {}
   const newArr: any[] = []
   for (let i = 0; i < arr.length; i++) {
@@ -14,6 +14,17 @@
     }
   }
   return newArr
+}
+
+/**
+ * @description: 单值数组去重
+ * @param {any} arr 单值数组
+ * @return {*}
+ */
+export const uniqueValueArr = (arr: any[]) => {
+  const set = new Set(arr)
+  const list = Array.from(set)
+  return list
 }
 
 

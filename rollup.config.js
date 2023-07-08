@@ -389,4 +389,50 @@ module.exports = [
       terser()
     ]
   },
+  {
+    input: resolvePath('src/date/index.ts'),
+    output: {
+      file: 'dist/date/index.esm.js',
+      format: 'esm',
+      name: 'date',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
+  {
+    input: resolvePath('src/date/index.ts'),
+    output: {
+      file: 'dist/date/index.umd.js',
+      format: 'umd',
+      name: 'date',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
 ]

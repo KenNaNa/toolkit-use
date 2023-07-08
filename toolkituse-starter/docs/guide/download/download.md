@@ -1,4 +1,4 @@
-## 示例
+## 链接下载示例
 
 ```vue
 <template>
@@ -6,18 +6,28 @@
   <button @click="dataStreamDownload">数据流下载</button>
 </template>
 <script setup lang="ts">
-import { frontUrlDownload, dataStreamDownloadExcelOrPdf } from '@toolkit-use/dist/download/index.esm'
+import { frontUrlDownload } from '@toolkit-use/dist/download/index.esm'
 
 const frontDownload = () => {
   frontUrlDownload(url, name)
 }
+</script>
+```
+
+## 数据流下载
+
+```vue
+<template>
+  <button @click="dataStreamDownload">数据流下载</button>
+</template>
+<script setup lang="ts">
+import { dataStreamDownloadExcelOrPdf } from '@toolkit-use/dist/download/index.esm'
 
 const dataStreamDownload = () => {
   fetch().then((res) => {
     dataStreamDownloadExcelOrPdf(res.data as Blob, name, 'excel')
   })
 }
-
 </script>
 ```
 
