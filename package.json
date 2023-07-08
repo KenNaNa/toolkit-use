@@ -1,10 +1,11 @@
 {
   "name": "toolkit-use",
-  "version": "0.0.3",
+  "version": "0.0.9",
   "description": "a npm toolkit use for vue.js and react",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
   "module": "dist/index.esm.js",
+  "keywords": ["npm", "js", "ts", "node", "library", "typescript", "toolkit", "element-ui", "element-plus", "vue3", "vue", "vuejs", "uikit", "react", "use"],
   "scripts": {
     "serve": "rollup -c -w", 
     "build": "rimraf dist/ && rollup -c",

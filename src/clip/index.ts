@@ -1,4 +1,4 @@
-import ClipboardJS from "clipboard";
+import Clipboard from "clipboard";
 import { ToolkitUseClipboardOptions } from "../../types/clip";
 /**
  * @description: 自定义复制功能
@@ -7,21 +7,22 @@ import { ToolkitUseClipboardOptions } from "../../types/clip";
 export class ToolkitUseClipboard {
   private _data: string = ''
   private _class: string = ''
-  private _clipboard: ClipboardJS
+  private _clipboard: Clipboard
   private _options: ToolkitUseClipboardOptions
 
 
   constructor(options: ToolkitUseClipboardOptions) {
     this._class = options.className
     this._data = options.message,
-    this._clipboard = new ClipboardJS(`.${this._class}`, {
+    console.log('options', options, this._class)
+    this._clipboard = new Clipboard(this._class, {
       text: () => this._data
     })
     this._options = options
   }
 
 
-  copy(): ClipboardJS {
+  copy(): Clipboard {
     this._clipboard.on('success', () => {
       this._options.onSuccess && this._options.onSuccess();
       this._clipboard.destroy()

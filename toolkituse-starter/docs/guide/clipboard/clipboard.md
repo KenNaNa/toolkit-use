@@ -14,8 +14,8 @@ const message = ref('真牛逼')
 
 const copyFn = () => {
   new ToolkitUseClipboard({
-    message,
-    className: 'text',
+    message: message.value,
+    className: '.copy',
     onSuccess: () => {},
     onError: () => {}
   }).copy()

@@ -7,6 +7,15 @@ module.exports = {
     nav: [
       { text: 'guide', link: '/guide/' },
       {
+        text: 'versions',
+        items: [
+          { text: '0.0.4', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.4', target: '_blank' },
+          { text: '0.0.3', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.3', target: '_blank' },
+          { text: '0.0.2', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.2', target: '_blank' },
+          { text: '0.0.1', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.1', target: '_blank' },
+        ]
+      },
+      {
         text: 'more',
         items: [
           { text: 'github', link: 'https://github.com/KenNaNa/toolkit-use', target: '_blank' },
