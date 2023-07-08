@@ -1,11 +1,12 @@
 {
   "name": "toolkit-use",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a npm toolkit use for vue.js and react",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
   "module": "dist/index.esm.js",
   "scripts": {
+    "serve": "rollup -c -w", 
     "build": "rimraf dist/ && rollup -c",
     "babel": "babel ./src/index.js -o ./dist/index.js",
     "test": "jest",

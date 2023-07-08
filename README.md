@@ -1,37 +1,32 @@
-# @babel/core
-[babel及其使用](https://blog.csdn.net/web22050702/article/details/128502822)
+## Introduction
+This project is an open-source project that serves as a collection of commonly used utility methods during the development process.
 
-# @babel/plugin-transform-runtime
-一个插件，可以重复使用 Babel 注入的帮助程序代码以节省代码大小。
+As an open-source project, we hope to receive support and appreciation from the community, and together maintain this toolkit.
 
-# core-js
-有时您可能想要使用新的内置函数，例如Map、Set等Promise。使用这些函数的唯一方法通常是包含一个全局污染的polyfill。
+ToolkitUse is a commonly used toolkit designed specifically for front-end developers, aiming to provide convenient and efficient solutions and tools to accelerate the front-end project development process. This article will introduce you to the main features and advantages of ToolkitUse, as well as the value it brings to front-end developers.
 
-# @babel/runtime
- a library that contains Babel modular runtime helpers
+## Key Features:
+Feature-rich toolset: ToolkitUse offers a wide range of functional tools, including string manipulation, date operations, form validation, network requests, and more. These tools can assist developers in handling common front-end tasks and issues, enhancing development efficiency.
 
- # rollup 工具包
- [使用rollup构建工具包](https://juejin.cn/post/7043617707421335588)
+Lightweight and high-performance: ToolkitUse is designed to be a lightweight and high-performance toolkit, ensuring it does not introduce additional burden when used in projects. It has been optimized and tested to provide fast and stable performance across various browsers and devices.
 
+Easy to use and integrate: ToolkitUse provides a concise and intuitive API, making it easy to learn and use. You can easily integrate ToolkitUse into your projects, and it is compatible with existing front-end frameworks and libraries.
 
- (node:32436) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
-(Use `node --trace-warnings ...` to show where the warning was created)
-[!] RollupError: Node tried to load your configuration file as CommonJS even though it is likely an ES module. To resolve this, change the extension of your configuration to ".mjs", set "type": "module" in your package.json file or pass the "--bundleConfigAsCjs" flag.
+Community support and documentation: ToolkitUse has an active developer community where you can seek support, advice, and solutions. Additionally, ToolkitUse offers detailed documentation and examples to help you get started quickly and understand the usage and functionality of each tool.
 
+## Advantages:
+Improved development efficiency: ToolkitUse provides a rich set of tools for front-end developers, reducing repetitive work and simplifying common task handling. By using ToolkitUse, you can complete development tasks faster, thereby enhancing overall development efficiency.
 
-koidpu@snapmail.cc
+Optimized code quality: ToolkitUse has been carefully designed and tested to ensure it provides high-quality solutions. It can help you write reliable and maintainable code, reducing errors and potential vulnerabilities.
 
+Cross-platform and compatibility: ToolkitUse supports multiple front-end environments and frameworks, making it suitable for various projects. Whether you are developing applications based on React, Vue.js, or Angular, ToolkitUse can provide support and convenience.
 
-# rollup 工具包发包
-[rollup 工具包发包](https://juejin.cn/post/7030456121810747429#heading-7)
+Conclusion:
+ToolkitUse is a commonly used toolkit for front-end developers, offering a rich set of functional tools to enhance development efficiency and optimize code quality. Whether you are a beginner or an experienced developer, using ToolkitUse can help you complete front-end projects more easily. Explore the features of ToolkitUse and apply them to your projects to experience the convenience and benefits it brings.
 
+## install
 
-[!] RollupError: Could not resolve "./clip/index" from "src/index.ts" src/in
-
-# 使用 rollup 打造自己的 npm 包 (全流程)
-[使用 rollup 打造自己的 npm 包 (全流程)](https://juejin.cn/post/6950557086916804645#heading-5)
-
-
-# VuePress 搭建组件库文档
-[VuePress 搭建组件库文档](https://juejin.cn/post/7064746265266880549)
+```bash
+npm i toolkit-use
+```
 
