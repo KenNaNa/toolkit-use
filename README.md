@@ -1,6 +1,9 @@
 ![](https://kennana.github.io/toolkit-use/logo.png)
 
-![star](https://star-history.com/#KenNaNa/toolkit-use&Date)
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=KenNaNa/toolkit-use&type=Date)](https://star-history.com/#KenNaNa/toolkit-use&Date)
+
 
 ## Introduction
 This project is an open-source project that serves as a collection of commonly used utility methods during the development process.
