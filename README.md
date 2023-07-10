@@ -1,3 +1,5 @@
+![](https://kennana.github.io/toolkit-use/logo.png)
+
 ## Introduction
 This project is an open-source project that serves as a collection of commonly used utility methods during the development process.
 

@@ -1,6 +1,6 @@
 {
   "name": "toolkit-use",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "a npm toolkit use for vue.js and react",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
@@ -19,9 +19,8 @@
   },
   "author": "kennana",
   "license": "MIT",
-  "repository": {
-    "type": "https://github.com/KenNaNa/toolkit-use.git"
-  },
+  "repository": "https://github.com/KenNaNa/toolkit-use.git",
+  "homepage": "https://kennana.github.io/toolkit-use",
   "devDependencies": {
     "@babel/cli": "^7.22.6",
     "@babel/core": "^7.22.6",
