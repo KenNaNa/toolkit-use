@@ -37,6 +37,8 @@ module.exports = {
             ['./decimal/decimal.md', '小数'],
             ['./download/download.md', '下载'],
             ['./string/string.md', '字符串'],
+            ['./event-hub/eventhub.md', '事件总线'],
+            ['./regex/regex.md', '常用正则'],
           ]
         }
       ],

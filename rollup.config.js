@@ -435,4 +435,96 @@ module.exports = [
       terser()
     ]
   },
+  {
+    input: resolvePath('src/event-hub/index.ts'),
+    output: {
+      file: 'dist/event-hub/index.esm.js',
+      format: 'esm',
+      name: 'event-hub',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
+  {
+    input: resolvePath('src/event-hub/index.ts'),
+    output: {
+      file: 'dist/event-hub/index.umd.js',
+      format: 'umd',
+      name: 'event-hub',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
+  {
+    input: resolvePath('src/regex/index.ts'),
+    output: {
+      file: 'dist/regex/index.esm.js',
+      format: 'esm',
+      name: 'regex',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
+  {
+    input: resolvePath('src/regex/index.ts'),
+    output: {
+      file: 'dist/regex/index.umd.js',
+      format: 'umd',
+      name: 'regex',
+    },
+    plugins: [
+      nodeResolve({
+        extensions,
+        modulesOnly: true
+      }),
+      commonjs(),
+      typescript(),
+      babel({
+        babelHelpers: 'runtime',
+        include: 'src/**',
+        exclude: 'node_modules/**',
+        extensions
+      }),
+      terser()
+    ]
+  },
 ]
