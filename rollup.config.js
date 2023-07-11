@@ -6,13 +6,10 @@ const { terser } = require("rollup-plugin-terser"); // 压缩打包文件
 const path = require('path')
 const fs = require('fs');
 
-console.log('__dirname', __dirname)
-
 const resolvePath = (src) => {
   return path.resolve(__dirname, '.' , src)
 }
 const filePath = resolvePath('src')
-console.log('__dirname', __dirname, filePath)
 const extensions = ['.js', '.ts'];
 
 const pkg = require('./package.json'); // 从package.json引入
