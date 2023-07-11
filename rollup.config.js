@@ -30,7 +30,6 @@ const banner =
     ' */';
 const filePathArr = []
 const filenameArr = []
-let rollupOptions = []
 // 构建 exports 配置项
 const buildRollupOptions =  (filePathArr) => {
   const rollupOptions = []
