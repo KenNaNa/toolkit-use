@@ -98,9 +98,7 @@ const fileDisplay = (filePath) => {
 
 const getOptions =  () => {
   fileDisplay(filePath)
-  // 最后打印的就是完整的文件路径了
-  rollupOptions = buildRollupOptions(filePathArr)
-  return rollupOptions
+  return buildRollupOptions(filePathArr)
 }
 
 module.exports = getOptions()
