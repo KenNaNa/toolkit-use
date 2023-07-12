@@ -1,6 +1,6 @@
 {
   "name": "toolkit-use",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "a npm toolkit use for vue.js and react",
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
