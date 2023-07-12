@@ -5,7 +5,7 @@ module.exports = {
   themeConfig: {
     logo: '/logo.png',
     nav: [
-      { text: 'guide', link: '/guide/' },
+      { text: '宁可一年不将军，不可一日不拱卒', link: '/guide/' },
       {
         text: 'versions',
         items: [
@@ -23,9 +23,6 @@ module.exports = {
           { text: 'preview', link: 'https://kennana.github.io/toolkit-use', target: '_blank' },
         ]
       },
-      {
-        text: '宁可一年不将军，不可一日不拱卒'
-      }
     ],
     sidebar: {
       '/guide/': [
