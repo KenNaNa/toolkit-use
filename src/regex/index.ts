@@ -40,4 +40,9 @@ export const carReg = /^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂�
 export const hanziReg = /^[\u4e00-\u9fa5]{0,}$/
 
 
+export const hyphenateRE = /\B([A-Z])/g
+
+export const camelizeRE = /-(\w)/g
+
+
 
