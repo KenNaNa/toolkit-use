@@ -5,7 +5,7 @@ import { transformDecimal, toPercent, toPoint } from './decimal/index'
 import { frontUrlDownload, dataStreamDownloadExcelOrPdf } from './download/index'
 import { padStartZero } from './string/index'
 // 后面给加上命名空间
-import { 
+import {
   isUndef,
   isDef,
   isTrue,
@@ -42,7 +42,19 @@ import {
   isIntegerKey,
   invokeArrayFns,
   hasChanged
- } from './shared/index'
+} from './shared/index'
+
+import {
+  getColor,
+  eventUtils,
+  addClass,
+  removeClass,
+  getElementLeft,
+  getElementTop,
+  getOffset,
+  getViewport,
+  outputAttributes,
+} from './dom/index'
 
 export {
   ToolkitUseClipboard,
@@ -51,10 +63,10 @@ export {
   uniqueValueArr,
   deepClone,
   formatDate,
-  transformDecimal, 
-  toPercent, 
+  transformDecimal,
+  toPercent,
   toPoint,
-  frontUrlDownload, 
+  frontUrlDownload,
   dataStreamDownloadExcelOrPdf,
   padStartZero,
   isUndef,
@@ -92,5 +104,14 @@ export {
   isSymbol,
   isIntegerKey,
   invokeArrayFns,
-  hasChanged
+  hasChanged,
+  getColor,
+  eventUtils,
+  addClass,
+  removeClass,
+  getElementLeft,
+  getElementTop,
+  getOffset,
+  getViewport,
+  outputAttributes,
 }

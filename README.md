@@ -42,16 +42,16 @@ npm i toolkit-use
 ```vue
 <script setup lang='ts'>
 import { 
-ToolkitUseClipboard,
+  ToolkitUseClipboard,
   ToolkitUseClipboardOptions,
   uniqueOptionsArr,
   uniqueValueArr,
   deepClone,
   formatDate,
-  transformDecimal, 
-  toPercent, 
+  transformDecimal,
+  toPercent,
   toPoint,
-  frontUrlDownload, 
+  frontUrlDownload,
   dataStreamDownloadExcelOrPdf,
   padStartZero,
   isUndef,
@@ -90,6 +90,15 @@ ToolkitUseClipboard,
   isIntegerKey,
   invokeArrayFns,
   hasChanged,
+  getColor,
+  eventUtils,
+  addClass,
+  removeClass,
+  getElementLeft,
+  getElementTop,
+  getOffset,
+  getViewport,
+  outputAttributes,
 } from 'toolkit-use'
 </script>
 ```

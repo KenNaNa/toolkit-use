@@ -36,10 +36,11 @@ module.exports = {
             ['./date/date.md', '日期'],
             ['./decimal/decimal.md', '小数'],
             ['./download/download.md', '下载'],
+            ['./regex/regex.md', '正则'],
             ['./string/string.md', '字符串'],
             ['./event-hub/eventhub.md', '事件总线'],
-            ['./regex/regex.md', '常用正则'],
-            ['./shared/shared.md', '常用共享方法'],
+            ['./shared/shared.md', '共享方法'],
+            ['./dom/dom.md', 'dom工具'],
           ]
         }
       ],

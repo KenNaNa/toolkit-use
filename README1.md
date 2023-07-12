@@ -68,3 +68,10 @@ https://juejin.cn/post/7249624871721418807
 
 
 [手写一个前端存储工具库](https://juejin.cn/post/7199659141019107386#heading-2)
+
+
+[前端构建工具vite进阶系列(零) -- 全局概况](https://juejin.cn/post/7144274662199918629)
+
+https://juejin.cn/post/7220049949026811960
+
+https://juejin.cn/post/7220591668042563644
