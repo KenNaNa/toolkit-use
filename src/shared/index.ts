@@ -111,7 +111,7 @@ export const toNumber = (val: any) => {
  * @param {any} obj The object to inspect.
  * @returns {boolean} True if the argument appears to be a plain object.
  */
- export function isPlainObject(obj) {
+ export function isPlainObject(obj: any) {
   if (typeof obj !== 'object' || obj === null) return false
 
   let proto = Object.getPrototypeOf(obj)
@@ -146,7 +146,7 @@ export const toString = (val: any) => {
  * @param {*} start
  * @return {*}
  */
-export function toArray (list, start) {
+export function toArray (list: any, start: any) {
   start = start || 0;
   var i = list.length - start;
   var ret = new Array(i);
@@ -158,7 +158,7 @@ export function toArray (list, start) {
 
 
 // 将属性赋予目标对象
-export function extend (to, _from) {
+export function extend (to: any, _from: any) {
   for (var key in _from) {
     to[key] = _from[key];
   }
@@ -170,7 +170,7 @@ export function extend (to, _from) {
  * @param {*} arr
  * @return {*}
  */
-export function toObject (arr) {
+export function toObject (arr: any) {
   var res = {};
   for (var i = 0; i < arr.length; i++) {
     if (arr[i]) {
@@ -185,9 +185,9 @@ export function toObject (arr) {
  * @param {*} fn
  * @return {*}
  */
-export function cached (fn) {
+export function cached (fn: any) {
   var cache = Object.create(null);
-  return (function cachedFn (str) {
+  return (function cachedFn (str: any) {
     var hit = cache[str];  // 进行缓存
     return hit || (cache[str] = fn(str))
   })
@@ -200,7 +200,7 @@ export function cached (fn) {
  * @param {*} function
  * @return {*}
  */
-export const capitalize = cached(function (str) {
+export const capitalize = cached(function (str: any) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 });
 
@@ -210,7 +210,7 @@ export const capitalize = cached(function (str) {
  * @param {*} function
  * @return {*}
  */
-export const hyphenate = cached(function (str) {
+export const hyphenate = cached(function (str: any) {
   return str.replace(hyphenateRE, '-$1').toLowerCase()
 });
 
@@ -222,8 +222,8 @@ export const hyphenate = cached(function (str) {
  * @param {*} c
  * @return {*}
  */
-export const camelize = cached(function (str) {
-  return str.replace(camelizeRE, function (_, c) { return c ? c.toUpperCase() : ''; })
+export const camelize = cached(function (str: any) {
+  return str.replace(camelizeRE, function (_: any, c: any) { return c ? c.toUpperCase() : ''; })
 });
 
 /**
@@ -233,8 +233,8 @@ export const camelize = cached(function (str) {
  * @return {*}
  */
  export function makeMap (
-  str,
-  expectsLowerCase
+  str: any,
+  expectsLowerCase: any
 ) {
   var map = Object.create(null);
   var list = str.split(',');
@@ -242,8 +242,8 @@ export const camelize = cached(function (str) {
     map[list[i]] = true;
   }
   return expectsLowerCase
-    ? function (val) { return map[val.toLowerCase()]; }
-    : function (val) { return map[val]; }
+    ? function (val: any) { return map[val.toLowerCase()]; }
+    : function (val: any) { return map[val]; }
 }
 
 
@@ -253,7 +253,7 @@ export const camelize = cached(function (str) {
  * @param {*} b
  * @return {*}
  */
-export function looseEqual (a, b) {
+export const looseEqual =  (a: any, b: any) => {
   // a、b恒等于，返回true
   if (a === b) { return true }
   var isObjectA = isObject(a);
@@ -265,7 +265,7 @@ export function looseEqual (a, b) {
       var isArrayB = Array.isArray(b);
       if (isArrayA && isArrayB) {
         // 若两者为数组，当长度一致时再递归判断每个数据项，不一致时返回false
-        return a.length === b.length && a.every(function (e, i) {
+        return a.length === b.length && a.every(function (e: any, i: any) {
           return looseEqual(e, b[i])
         })
       } else if (a instanceof Date && b instanceof Date) {
@@ -300,27 +300,11 @@ export function looseEqual (a, b) {
  * @param {*} item
  * @return {*}
  */
-export function remove (arr, item) {
+export function remove (arr: any, item: any) {
   if (arr.length) {
     var index = arr.indexOf(item);
     if (index > -1) {
       return arr.splice(index, 1)
-    }
-  }
-}
-
-/**
- * @description: 函数只执行一次
- * @param {*} fn
- * @param {*} arguments
- * @return {*}
- */
-export function once (fn) {
-  var called = false;
-  return function () {
-    if (!called) {
-      called = true;
-      fn.apply(this, arguments);
     }
   }
 }
@@ -331,7 +315,7 @@ export function once (fn) {
  * @param {*} b
  * @return {*}
  */
-export function looseCompareArrays(a, b) {
+export function looseCompareArrays(a: any, b: any) {
     // 若长度不一致，返回false
     if (a.length !== b.length)
         return false;
@@ -350,7 +334,7 @@ export function looseCompareArrays(a, b) {
  * @param {*} value
  * @return {*}
  */
-export const def = (obj, key, value) => {
+export const def = (obj: any, key: any, value: any) => {
   Object.defineProperty(obj, key, {
       configurable: true,  // 可配置的
       enumerable: false,  // 不可枚举的
@@ -368,7 +352,7 @@ export const objectToString = Object.prototype.toString;
  * @param {*} value
  * @return {*}
  */
-export const toTypeString = (value) => objectToString.call(value);
+export const toTypeString = (value: any) => objectToString.call(value);
 /**
  * @description: 检测数组
  * @return {*}
@@ -379,37 +363,37 @@ export const isArray = Array.isArray;
  * @param {*} val
  * @return {*}
  */
-export const isMap = (val) => toTypeString(val) === '[object Map]';
+export const isMap = (val: any) => toTypeString(val) === '[object Map]';
 /**
  * @description: 检测 set
  * @param {*} val
  * @return {*}
  */
-export const isSet = (val) => toTypeString(val) === '[object Set]';
+export const isSet = (val: any) => toTypeString(val) === '[object Set]';
 /**
  * @description: 检测日期
  * @param {*} val
  * @return {*}
  */
-export const isDate = (val) => val instanceof Date;
+export const isDate = (val: any) => val instanceof Date;
 /**
  * @description: 检测函数
  * @param {*} val
  * @return {*}
  */
-export const isFunction = (val) => typeof val === 'function';
+export const isFunction = (val: any) => typeof val === 'function';
 /**
  * @description: 检测字符串
  * @param {*} val
  * @return {*}
  */
-export const isString = (val) => typeof val === 'string';
+export const isString = (val: any) => typeof val === 'string';
 /**
  * @description: 检测 symbol
  * @param {*} val
  * @return {*}
  */
-export const isSymbol = (val) => typeof val === 'symbol';
+export const isSymbol = (val: any) => typeof val === 'symbol';
 
 
 
@@ -419,7 +403,7 @@ export const isSymbol = (val) => typeof val === 'symbol';
  * @param {*} key
  * @return {*}
  */
-export const isIntegerKey = (key) => isString(key) && key !== 'NaN' && key[0] !== '-' && '' + parseInt(key, 10) === key;
+export const isIntegerKey = (key: any) => isString(key) && key !== 'NaN' && key[0] !== '-' && '' + parseInt(key, 10) === key;
 
 /**
  * @description: fns是数组，各元素均为函数，遍历数组执行，利于一次性执行多个函数
@@ -427,7 +411,7 @@ export const isIntegerKey = (key) => isString(key) && key !== 'NaN' && key[0] !=
  * @param {*} arg
  * @return {*}
  */
-export const invokeArrayFns = (fns, arg) => {
+export const invokeArrayFns = (fns: any, arg: any) => {
   for (let i = 0; i < fns.length; i++) {
       fns[i](arg);
   }
@@ -439,7 +423,5 @@ export const invokeArrayFns = (fns, arg) => {
  * @param {*} oldValue
  * @return {*}
  */
-export const hasChanged = (value, oldValue) => !Object.is(value, oldValue)
-
-
+export const hasChanged = (value: any, oldValue: any) => !Object.is(value, oldValue)
 

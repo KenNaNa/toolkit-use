@@ -54,3 +54,17 @@ https://juejin.cn/post/7215963267503161403
 
 
 https://inhiblabcore.github.io/docs/hooks/usePreview/
+
+https://juejin.cn/post/7245584147456426045#heading-7
+
+
+[【TypeScript入门】TypeScript入门篇——命名空间](https://blog.csdn.net/dxt19980308/article/details/128625265)
+
+[Vue3 TypeScript 实现一个 useRequest](https://juejin.cn/post/7100804171388944398)
+
+https://effect.website/docs/quickstart
+
+https://juejin.cn/post/7249624871721418807
+
+
+[手写一个前端存储工具库](https://juejin.cn/post/7199659141019107386#heading-2)

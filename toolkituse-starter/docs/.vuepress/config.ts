@@ -9,10 +9,10 @@ module.exports = {
       {
         text: 'versions',
         items: [
-          { text: '0.0.9', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.9', target: '_blank' },
-          { text: '0.0.8', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.8', target: '_blank' },
-          { text: '0.0.7', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.7', target: '_blank' },
-          { text: '0.0.6', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.6', target: '_blank' },
+          { text: '0.0.14', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.14', target: '_blank' },
+          { text: '0.0.13', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.13', target: '_blank' },
+          { text: '0.0.12', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.12', target: '_blank' },
+          { text: '0.0.11', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.11', target: '_blank' },
         ]
       },
       {
@@ -22,6 +22,9 @@ module.exports = {
           { text: 'twitter', link: 'https://twitter.com/Toolkituse', target: '_blank' },
           { text: 'preview', link: 'https://kennana.github.io/toolkit-use', target: '_blank' },
         ]
+      },
+      {
+        text: '宁可一年不将军，不可一日不拱卒'
       }
     ],
     sidebar: {
@@ -39,9 +42,10 @@ module.exports = {
             ['./string/string.md', '字符串'],
             ['./event-hub/eventhub.md', '事件总线'],
             ['./regex/regex.md', '常用正则'],
+            ['./shared/shared.md', '常用共享方法'],
           ]
         }
       ],
     },
-  }
+  },
 }

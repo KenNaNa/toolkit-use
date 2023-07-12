@@ -1,5 +1,5 @@
 /*!
- * toolkit-use v0.0.14
+ * toolkit-use v0.0.15
  * (c) 2023 ~ 至今 kennana
  * Released under the MIT License.
  */
