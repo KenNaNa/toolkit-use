@@ -5,9 +5,25 @@
   "main": "dist/index.umd.js",
   "types": "types/index.d.ts",
   "module": "dist/index.esm.js",
-  "keywords": ["npm", "js", "ts", "node", "library", "typescript", "toolkit", "element-ui", "element-plus", "vue3", "vue", "vuejs", "uikit", "react", "use"],
+  "keywords": [
+    "npm",
+    "js",
+    "ts",
+    "node",
+    "library",
+    "typescript",
+    "toolkit",
+    "element-ui",
+    "element-plus",
+    "vue3",
+    "vue",
+    "vuejs",
+    "uikit",
+    "react",
+    "use"
+  ],
   "scripts": {
-    "serve": "rollup -c -w", 
+    "serve": "rollup -c -w",
     "build": "rimraf dist/ && rollup -c",
     "babel": "babel ./src/index.js -o ./dist/index.js",
     "test": "jest",
@@ -48,6 +64,7 @@
     "@babel/runtime": "^7.22.6",
     "clipboard": "^2.0.11",
     "core-js": "^3.31.1",
+    "crypto-js": "^4.1.1",
     "rimraf": "^4"
   }
 }

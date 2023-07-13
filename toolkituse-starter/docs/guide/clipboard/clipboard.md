@@ -8,7 +8,7 @@
 </template>
 <script setup lang='ts'>
 import { ref } from 'vue'
-import { ToolkitUseClipboard } from '@toolkit-use/dist/clip/index.esm'
+import { ToolkitUseClipboard } from 'toolkit-use/dist/clip/index.esm'
 
 const message = ref('真牛逼')
 

@@ -7,6 +7,7 @@ import { ToolkitUseString } from './string/index'
 import { ToolkitUseShared } from './shared/index'
 import { ToolkitUseRegex } from './regex/index'
 import { ToolkitUseDom } from './dom/index'
+import { ToolkitUseStorage } from './storage'
 
 export {
   ToolkitUseClipboard,
@@ -19,4 +20,5 @@ export {
   ToolkitUseShared,
   ToolkitUseRegex,
   ToolkitUseDom,
+  ToolkitUseStorage,
 }

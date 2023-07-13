@@ -41,6 +41,7 @@ module.exports = {
             ['./event-hub/eventhub.md', '事件总线'],
             ['./shared/shared.md', '共享方法'],
             ['./dom/dom.md', 'dom工具'],
+            ['./storage/storage.md', 'storage工具'],
           ]
         }
       ],
