@@ -1,11 +1,11 @@
 ## 前补零示例
 ```vue
 <script setup lang="ts">
-import { padStartZero } from "toolkit-use/dist/string/index.esm"
+import { ToolkitUseString } from "toolkit-use/dist/string/index.esm"
 
 let str = 12
 
-str = padStartZero(str, 3)
+str = ToolkitUseString.padStartZero(str, 3)
 </script>
 ```
 

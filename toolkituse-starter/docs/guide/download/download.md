@@ -6,10 +6,10 @@
   <button @click="dataStreamDownload">数据流下载</button>
 </template>
 <script setup lang="ts">
-import { frontUrlDownload } from '@toolkit-use/dist/download/index.esm'
+import { ToolkitUseDownload } from 'toolkit-use/dist/download/index.esm'
 
 const frontDownload = () => {
-  frontUrlDownload(url, name)
+  ToolkitUseDownload.frontUrlDownload(url, name)
 }
 </script>
 ```
@@ -21,11 +21,11 @@ const frontDownload = () => {
   <button @click="dataStreamDownload">数据流下载</button>
 </template>
 <script setup lang="ts">
-import { dataStreamDownloadExcelOrPdf } from '@toolkit-use/dist/download/index.esm'
+import { ToolkitUseDownload } from 'toolkit-use/dist/download/index.esm'
 
 const dataStreamDownload = () => {
   fetch().then((res) => {
-    dataStreamDownloadExcelOrPdf(res.data as Blob, name, 'excel')
+    ToolkitUseDownload.dataStreamDownloadExcelOrPdf(res.data as Blob, name, 'excel')
   })
 }
 </script>

@@ -2,7 +2,7 @@
  * @description: 获取16进制颜色
  * @return {*}
  */
-export const getColor = () => {
+const getColor = () => {
   const colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
   let str = ''
   for (let i = 0; i < 6; i++) {
@@ -23,7 +23,7 @@ export const getColor = () => {
  * @param {function} getRelatedTarget 获取相对目标
  * @return {*}
  */
-export const eventUtils = {
+const eventUtils = {
   addHandler: (element: any, type: any, handler: any) => {
     if (element.addEventListener) {
       element.addEventListener(type, handler, false);
@@ -114,7 +114,7 @@ export const eventUtils = {
  * @param {*} classN 类名
  * @return {*}
  */
-export function addClass(elem, classN) {
+function addClass(elem, classN) {
   // 对传参进来的类名进行切割
   const arr1 = elem.className.split(' ');
   // 对要添加的类名进行切割
@@ -132,7 +132,7 @@ export function addClass(elem, classN) {
 }
 
 //删除某个Class类名
-export function removeClass(obj, cName) {
+function removeClass(obj, cName) {
   //首先，取得类名字符串并拆分成数组
   var classNames = obj.className.split(/\s+/);
   var pos,//存储要删除类名的位置
@@ -149,7 +149,7 @@ export function removeClass(obj, cName) {
   return pos
 }
 
-export function getElementLeft(element) {
+function getElementLeft(element) {
   var actualLeft = element.offsetLeft;
   var current = element.offsetParent;
   while (current !== null) {
@@ -159,7 +159,7 @@ export function getElementLeft(element) {
   return actualLeft;
 }
 
-export function getElementTop(element) {
+function getElementTop(element) {
   var actualTop = element.offsetTop;
   var current = element.offsetParent;
   while (current !== null) {
@@ -172,7 +172,7 @@ export function getElementTop(element) {
 // 要想知道某个元素在页面上的偏移量，
 // 将这个元素的 offsetLeft 和 offsetTop 与其 offsetParent
 // 的相同属性相加，如此循环直至根元素，就可以得到一个基本准确的值。
-export function getOffset(obj) {
+function getOffset(obj) {
   var json = {
     left: 0,
     top: 0
@@ -185,7 +185,7 @@ export function getOffset(obj) {
   return json
 }
 
-export function getViewport() {
+function getViewport() {
   if (document.compatMode == "BackCompat") {
     return {
       width: document.body.clientWidth,
@@ -200,11 +200,11 @@ export function getViewport() {
 }
 
 //遍历元素的属性函数
-//兼容IE7之前 
+//兼容IE7之前
 //每个特性节点都有一个名为 specified 的属性，这个属性的值如果为 true，
 //则意味着要么是在 HTML 中指定了相应特性，
 //attributes[i]获取的是属性节点
-export function outputAttributes(element) {
+function outputAttributes(element) {
   var attrName,
     attrValue,
     attrArr = new Array(),
@@ -217,4 +217,26 @@ export function outputAttributes(element) {
     }
   }
   return attrArr.join(' ');
+}
+
+
+export const ToolkitUseDom = {
+  getColor,
+  addHandler: eventUtils.addHandler,
+  removeHandler: eventUtils.removeHandler,
+  getEvent: eventUtils.getEvent,
+  getTarget: eventUtils.getTarget,
+  preventDefault: eventUtils.preventDefault,
+  stopPropagation: eventUtils.stopPropagation,
+  getRelatedTarget: eventUtils.getRelatedTarget,
+  getButton: eventUtils.getButton,
+  getWheelDelta: eventUtils.getWheelDelta,
+  getCharCode: eventUtils.getCharCode,
+  addClass,
+  removeClass,
+  getElementLeft,
+  getElementTop,
+  getOffset,
+  getViewport,
+  outputAttributes,
 }

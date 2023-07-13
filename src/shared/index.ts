@@ -1,10 +1,10 @@
-import { hyphenateRE, camelizeRE } from '../regex/index'
+import { ToolkitUseRegex } from '../regex/index'
 /**
  * @description: 判断是否为undefined或null
  * @param {any} v
  * @return {*}
  */
-export const isUndef = (v: any) => {
+const isUndef = (v: any) => {
   return v === undefined || v === null
 }
 
@@ -14,7 +14,7 @@ export const isUndef = (v: any) => {
  * @param {any} v
  * @return {*}
  */
-export const isDef = (v: any) => {
+const isDef = (v: any) => {
   return v !== undefined && v !== null
 }
 
@@ -23,7 +23,7 @@ export const isDef = (v: any) => {
  * @param {any} v
  * @return {*}
  */
-export const isTrue = (v: any) => {
+const isTrue = (v: any) => {
   return v === true
 }
 
@@ -32,7 +32,7 @@ export const isTrue = (v: any) => {
  * @param {any} v
  * @return {*}
  */
-export const isFalse = (v: any) => {
+const isFalse = (v: any) => {
   return v === false
 }
 
@@ -41,7 +41,7 @@ export const isFalse = (v: any) => {
  * @param {any} v
  * @return {*}
  */
-export const isPrimitive = (v: any) => {
+const isPrimitive = (v: any) => {
   return (
     typeof v === 'string' ||
     typeof v === 'number' ||
@@ -55,7 +55,7 @@ export const isPrimitive = (v: any) => {
  * @param {any} obj
  * @return {*}
  */
-export const isObject = (obj: any) => {
+const isObject = (obj: any) => {
   return obj !== null && typeof obj === 'object'  // 注意 null 在 typeof 的坑
 }
 
@@ -64,7 +64,7 @@ export const isObject = (obj: any) => {
  * @param {any} val
  * @return {*}
  */
-export const isPromise = (val: any) => {
+const isPromise = (val: any) => {
   return (
     isDef(val) &&
     typeof val.then === 'function' &&
@@ -79,7 +79,7 @@ const _toString = Object.prototype.toString
  * @param {any} val
  * @return {*}
  */
-export const toRawType = (val: any) => {
+const toRawType = (val: any) => {
   return _toString.call(val).slice(8, -1)
 }
 
@@ -91,7 +91,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * @param {any} key
  * @return {*}
  */
-export const  hasOwn = (obj: any, key: any) => {
+const hasOwn = (obj: any, key: any) => {
   return hasOwnProperty.call(obj, key)
 }
 
@@ -101,7 +101,7 @@ export const  hasOwn = (obj: any, key: any) => {
  * @param {any} val
  * @return {*}
  */
-export const toNumber = (val: any) => {
+const toNumber = (val: any) => {
   const n = parseFloat(val);
   return isNaN(n) ? val : n
 }
@@ -111,7 +111,7 @@ export const toNumber = (val: any) => {
  * @param {any} obj The object to inspect.
  * @returns {boolean} True if the argument appears to be a plain object.
  */
- export function isPlainObject(obj: any) {
+function isPlainObject(obj: any) {
   if (typeof obj !== 'object' || obj === null) return false
 
   let proto = Object.getPrototypeOf(obj)
@@ -132,7 +132,7 @@ export const toNumber = (val: any) => {
  * @param {any} val
  * @return {*}
  */
-export const toString = (val: any) => {
+const toString = (val: any) => {
   return val == null
     ? ''
     : Array.isArray(val) || (isPlainObject(val) && val.toString === _toString)
@@ -146,7 +146,7 @@ export const toString = (val: any) => {
  * @param {*} start
  * @return {*}
  */
-export function toArray (list: any, start: any) {
+function toArray(list: any, start: any) {
   start = start || 0;
   var i = list.length - start;
   var ret = new Array(i);
@@ -158,7 +158,7 @@ export function toArray (list: any, start: any) {
 
 
 // 将属性赋予目标对象
-export function extend (to: any, _from: any) {
+function extend(to: any, _from: any) {
   for (var key in _from) {
     to[key] = _from[key];
   }
@@ -170,7 +170,7 @@ export function extend (to: any, _from: any) {
  * @param {*} arr
  * @return {*}
  */
-export function toObject (arr: any) {
+function toObject(arr: any) {
   var res = {};
   for (var i = 0; i < arr.length; i++) {
     if (arr[i]) {
@@ -185,9 +185,9 @@ export function toObject (arr: any) {
  * @param {*} fn
  * @return {*}
  */
-export function cached (fn: any) {
+function cached(fn: any) {
   var cache = Object.create(null);
-  return (function cachedFn (str: any) {
+  return (function cachedFn(str: any) {
     var hit = cache[str];  // 进行缓存
     return hit || (cache[str] = fn(str))
   })
@@ -200,7 +200,7 @@ export function cached (fn: any) {
  * @param {*} function
  * @return {*}
  */
-export const capitalize = cached(function (str: any) {
+const capitalize = cached(function (str: any) {
   return str.charAt(0).toUpperCase() + str.slice(1)
 });
 
@@ -210,8 +210,8 @@ export const capitalize = cached(function (str: any) {
  * @param {*} function
  * @return {*}
  */
-export const hyphenate = cached(function (str: any) {
-  return str.replace(hyphenateRE, '-$1').toLowerCase()
+const hyphenate = cached(function (str: any) {
+  return str.replace(ToolkitUseRegex.hyphenateRE, '-$1').toLowerCase()
 });
 
 
@@ -222,8 +222,8 @@ export const hyphenate = cached(function (str: any) {
  * @param {*} c
  * @return {*}
  */
-export const camelize = cached(function (str: any) {
-  return str.replace(camelizeRE, function (_: any, c: any) { return c ? c.toUpperCase() : ''; })
+const camelize = cached(function (str: any) {
+  return str.replace(ToolkitUseRegex.camelizeRE, function (_: any, c: any) { return c ? c.toUpperCase() : ''; })
 });
 
 /**
@@ -232,7 +232,7 @@ export const camelize = cached(function (str: any) {
  * @param expectsLowerCase 是否需要小写
  * @return {*}
  */
- export function makeMap (
+function makeMap(
   str: any,
   expectsLowerCase: any
 ) {
@@ -253,7 +253,7 @@ export const camelize = cached(function (str: any) {
  * @param {*} b
  * @return {*}
  */
-export const looseEqual =  (a: any, b: any) => {
+const looseEqual = (a: any, b: any) => {
   // a、b恒等于，返回true
   if (a === b) { return true }
   var isObjectA = isObject(a);
@@ -300,7 +300,7 @@ export const looseEqual =  (a: any, b: any) => {
  * @param {*} item
  * @return {*}
  */
-export function remove (arr: any, item: any) {
+function remove(arr: any, item: any) {
   if (arr.length) {
     var index = arr.indexOf(item);
     if (index > -1) {
@@ -315,16 +315,16 @@ export function remove (arr: any, item: any) {
  * @param {*} b
  * @return {*}
  */
-export function looseCompareArrays(a: any, b: any) {
-    // 若长度不一致，返回false
-    if (a.length !== b.length)
-        return false;
-    let equal = true;
-    // 若长度一致，再逐个数组项进行对比
-    for (let i = 0; equal && i < a.length; i++) {
-        equal = looseEqual(a[i], b[i]);
-    }
-    return equal;
+function looseCompareArrays(a: any, b: any) {
+  // 若长度不一致，返回false
+  if (a.length !== b.length)
+    return false;
+  let equal = true;
+  // 若长度一致，再逐个数组项进行对比
+  for (let i = 0; equal && i < a.length; i++) {
+    equal = looseEqual(a[i], b[i]);
+  }
+  return equal;
 }
 
 /**
@@ -334,11 +334,11 @@ export function looseCompareArrays(a: any, b: any) {
  * @param {*} value
  * @return {*}
  */
-export const def = (obj: any, key: any, value: any) => {
+const def = (obj: any, key: any, value: any) => {
   Object.defineProperty(obj, key, {
-      configurable: true,  // 可配置的
-      enumerable: false,  // 不可枚举的
-      value
+    configurable: true,  // 可配置的
+    enumerable: false,  // 不可枚举的
+    value
   });
 };
 
@@ -346,54 +346,54 @@ export const def = (obj: any, key: any, value: any) => {
  * @description: 获取原型上面的 toString 方法
  * @return {*}
  */
-export const objectToString = Object.prototype.toString;
+const objectToString = Object.prototype.toString;
 /**
  * @description: 方法函数
  * @param {*} value
  * @return {*}
  */
-export const toTypeString = (value: any) => objectToString.call(value);
+const toTypeString = (value: any) => objectToString.call(value);
 /**
  * @description: 检测数组
  * @return {*}
  */
-export const isArray = Array.isArray;
+const isArray = Array.isArray;
 /**
  * @description: 检测 map
  * @param {*} val
  * @return {*}
  */
-export const isMap = (val: any) => toTypeString(val) === '[object Map]';
+const isMap = (val: any) => toTypeString(val) === '[object Map]';
 /**
  * @description: 检测 set
  * @param {*} val
  * @return {*}
  */
-export const isSet = (val: any) => toTypeString(val) === '[object Set]';
+const isSet = (val: any) => toTypeString(val) === '[object Set]';
 /**
  * @description: 检测日期
  * @param {*} val
  * @return {*}
  */
-export const isDate = (val: any) => val instanceof Date;
+const isDate = (val: any) => val instanceof Date;
 /**
  * @description: 检测函数
  * @param {*} val
  * @return {*}
  */
-export const isFunction = (val: any) => typeof val === 'function';
+const isFunction = (val: any) => typeof val === 'function';
 /**
  * @description: 检测字符串
  * @param {*} val
  * @return {*}
  */
-export const isString = (val: any) => typeof val === 'string';
+const isString = (val: any) => typeof val === 'string';
 /**
  * @description: 检测 symbol
  * @param {*} val
  * @return {*}
  */
-export const isSymbol = (val: any) => typeof val === 'symbol';
+const isSymbol = (val: any) => typeof val === 'symbol';
 
 
 
@@ -403,7 +403,7 @@ export const isSymbol = (val: any) => typeof val === 'symbol';
  * @param {*} key
  * @return {*}
  */
-export const isIntegerKey = (key: any) => isString(key) && key !== 'NaN' && key[0] !== '-' && '' + parseInt(key, 10) === key;
+const isIntegerKey = (key: any) => isString(key) && key !== 'NaN' && key[0] !== '-' && '' + parseInt(key, 10) === key;
 
 /**
  * @description: fns是数组，各元素均为函数，遍历数组执行，利于一次性执行多个函数
@@ -411,9 +411,9 @@ export const isIntegerKey = (key: any) => isString(key) && key !== 'NaN' && key[
  * @param {*} arg
  * @return {*}
  */
-export const invokeArrayFns = (fns: any, arg: any) => {
+const invokeArrayFns = (fns: any, arg: any) => {
   for (let i = 0; i < fns.length; i++) {
-      fns[i](arg);
+    fns[i](arg);
   }
 };
 
@@ -423,5 +423,43 @@ export const invokeArrayFns = (fns: any, arg: any) => {
  * @param {*} oldValue
  * @return {*}
  */
-export const hasChanged = (value: any, oldValue: any) => !Object.is(value, oldValue)
+const hasChanged = (value: any, oldValue: any) => !Object.is(value, oldValue)
 
+export const ToolkitUseShared = {
+  isUndef,
+  isDef,
+  isTrue,
+  isFalse,
+  isPrimitive,
+  isObject,
+  isPromise,
+  toRawType,
+  hasOwn,
+  toNumber,
+  isPlainObject,
+  toString,
+  toArray,
+  extend,
+  toObject,
+  cached,
+  capitalize,
+  hyphenate,
+  camelize,
+  makeMap,
+  looseEqual,
+  remove,
+  looseCompareArrays,
+  def,
+  objectToString,
+  toTypeString,
+  isArray,
+  isMap,
+  isSet,
+  isDate,
+  isFunction,
+  isString,
+  isSymbol,
+  isIntegerKey,
+  invokeArrayFns,
+  hasChanged
+}

@@ -2,7 +2,8 @@
 
 ```vue
 <script setup lang="ts">
-import {
+import { ToolkitUseRegex } from 'toolkit-use/dist/regex/index.esm'
+ const {
   // 有效数字检测
   significantDigitsReg,
   // 中文真名
@@ -35,6 +36,6 @@ import {
   carReg,
   // 汉字正则
   hanziReg,
- } from 'toolkit-use/dist/regex/index.esm'
+ } = ToolkitUseRegex
 </script>
 ```

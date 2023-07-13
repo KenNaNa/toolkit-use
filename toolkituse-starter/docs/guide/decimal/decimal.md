@@ -1,15 +1,15 @@
 ## 保留小数示例
 ```vue
 <script setup lang="ts">
-import { transformDecimal } from "toolkit-use/dist/decimal/index.esm"
+import { ToolkitUseDecimal } from "toolkit-use/dist/decimal/index.esm"
 
 let str = 12.1212222
 // 可用此方法来替代 toFixed 小数精度丢失问题
-str = transformDecimal(str, 2)
+str = ToolkitUseDecimal.transform(str, 2)
 </script>
 ```
 
-## transformDecimal 参数说明
+## transform 参数说明
 
 | 参数        | 说明 | 值类型
 | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -19,14 +19,14 @@ str = transformDecimal(str, 2)
 ## 小数转百分比示例
 ```vue
 <script setup lang="ts">
-import { toPercent } from "toolkit-use/dist/decimal/index.esm"
+import { ToolkitUseDecimal } from "toolkit-use/dist/decimal/index.esm"
 
 let str = 12.1212222
-str = toPercent(str, 2, true)
+str = ToolkitUseDecimal.percent(str, 2, true)
 </script>
 ```
 
-## toPercent 参数说明
+## percent 参数说明
 
 | 参数        | 说明 | 值类型
 | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -37,14 +37,14 @@ str = toPercent(str, 2, true)
 ## 百分比转小数示例
 ```vue
 <script setup lang="ts">
-import { toPoint } from "toolkit-use/dist/decimal/index.esm"
+import { ToolkitUseDecimal } from "toolkit-use/dist/decimal/index.esm"
 
 let str = "12.12123%"
-str = toPoint(str, 2)
+str = ToolkitUseDecimal.point(str, 2)
 </script>
 ```
 
-## toPoint 参数说明
+## point 参数说明
 
 | 参数        | 说明 | 值类型
 | ----------- | --------------------------------------- | ------------------------------------------------------------------------------------ |

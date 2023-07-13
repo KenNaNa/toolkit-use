@@ -44,61 +44,14 @@ npm i toolkit-use
 import { 
   ToolkitUseClipboard,
   ToolkitUseClipboardOptions,
-  uniqueOptionsArr,
-  uniqueValueArr,
-  deepClone,
-  formatDate,
-  transformDecimal,
-  toPercent,
-  toPoint,
-  frontUrlDownload,
-  dataStreamDownloadExcelOrPdf,
-  padStartZero,
-  isUndef,
-  isDef,
-  isTrue,
-  isFalse,
-  isPrimitive,
-  isObject,
-  isPromise,
-  toRawType,
-  hasOwn,
-  toNumber,
-  isPlainObject,
-  toString,
-  toArray,
-  extend,
-  toObject,
-  cached,
-  capitalize,
-  hyphenate,
-  camelize,
-  makeMap,
-  looseEqual,
-  remove,
-  looseCompareArrays,
-  def,
-  objectToString,
-  toTypeString,
-  isArray,
-  isMap,
-  isSet,
-  isDate,
-  isFunction,
-  isString,
-  isSymbol,
-  isIntegerKey,
-  invokeArrayFns,
-  hasChanged,
-  getColor,
-  eventUtils,
-  addClass,
-  removeClass,
-  getElementLeft,
-  getElementTop,
-  getOffset,
-  getViewport,
-  outputAttributes,
+  ToolkitUseArray,
+  ToolkitUseDate,
+  ToolkitUseDecimal,
+  ToolkitUseDownload,
+  ToolkitUseString,
+  ToolkitUseShared,
+  ToolkitUseRegex,
+  ToolkitUseDom,
 } from 'toolkit-use'
 </script>
 ```
@@ -110,28 +63,19 @@ import {
 
 ## array
 
-![](./toolkituse-starter/docs/imgs/1.png)
-![](./toolkituse-starter/docs/imgs/2.png)
-![](./toolkituse-starter/docs/imgs/3.png)
-![](./toolkituse-starter/docs/imgs/4.png)
 
 ## date 
-![](./toolkituse-starter/docs/imgs/5.png)
+
 
 ## decimal
-![](./toolkituse-starter/docs/imgs/6.png)
-![](./toolkituse-starter/docs/imgs/7.png)
-![](./toolkituse-starter/docs/imgs/8.png)
+
 
 ## download
-![](./toolkituse-starter/docs/imgs/9.png)
-![](./toolkituse-starter/docs/imgs/10.png)
+
 
 ## string
-![](./toolkituse-starter/docs/imgs/11.png)
+
 
 ## eventhub
-![](./toolkituse-starter/docs/imgs/12.png)
 
 ## regex
-![](./toolkituse-starter/docs/imgs/13.png)

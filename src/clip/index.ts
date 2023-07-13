@@ -1,5 +1,5 @@
 import Clipboard from "clipboard";
-import { ToolkitUseClipboardOptions } from "../../types/clip";
+import { ToolkitUseClipboardOptions } from "../../types/clip.d";
 /**
  * @description: 自定义复制功能
  * @return {*}
@@ -14,7 +14,7 @@ class ToolkitUseClipboard {
   constructor(options: ToolkitUseClipboardOptions) {
     this._class = options.className
     this._data = options.message,
-    console.log('options', options, this._class)
+      console.log('options', options, this._class)
     this._clipboard = new Clipboard(this._class, {
       text: () => this._data
     })

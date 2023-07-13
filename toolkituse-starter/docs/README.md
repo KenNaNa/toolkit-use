@@ -6,11 +6,11 @@ actionText: 快速上手 →
 actionLink: /guide/
 features:
 - title: 简洁至上
-  details: 只需引入 npm 包，导出对应的方法，就能使用
-- title: rollup打包
+  details: 简洁的语法和易用的特性，轻松上手，详细的文档。
+- title: rollup
   details: rollup 打包，支持 es module, umd 通用模块定义规范，同时支持 amd，cjs，iife
 - title: 支持 typescript
-  details: 采用 typescript 开发
+  details: 使用 TypeScript 构建，提供完整的类型定义文件，安全严谨。
 - title: 支持 tree-shaking
   details: 多模块多入口，多出口打包
 - title: 多样性

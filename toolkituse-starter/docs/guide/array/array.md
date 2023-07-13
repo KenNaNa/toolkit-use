@@ -1,7 +1,7 @@
 ## 对象数组去重示例
 ```vue
 <script setup lang="ts">
-import { uniqueOptionsArr } from "toolkit-use/dist/array/index.esm"
+import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
 const optionsArr = [
@@ -27,7 +27,7 @@ const optionsArr = [
   }
 ]
 
-const arr = uniqueOptionsArr(optionsArr, 'id')
+const arr = ToolkitUseArray.uniqueOptionsArr(optionsArr, 'id')
 </script>
 ```
 
@@ -36,7 +36,7 @@ const arr = uniqueOptionsArr(optionsArr, 'id')
 
 ```vue
 <script setup lang="ts">
-import { uniqueValueArr } from "toolkit-use/dist/array/index.esm"
+import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
 const optionsArr = [
@@ -55,7 +55,7 @@ const optionsArr = [
   NaN,
 ]
 
-const arr = uniqueValueArr(optionsArr)
+const arr = ToolkitUseArray.uniqueValueArr(optionsArr)
 </script>
 ```
 
@@ -63,7 +63,7 @@ const arr = uniqueValueArr(optionsArr)
 
 ```vue
 <script setup lang="ts">
-import { deepClone } from "toolkit-use/dist/array/index.esm"
+import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
 const optionsArr = [
@@ -77,7 +77,7 @@ const optionsArr = [
   }
 ]
 
-const arr = deepClone(optionsArr)
+const arr = ToolkitUseArray.deepClone(optionsArr)
 
 const obj = {
   name: '小仙女',
@@ -89,7 +89,7 @@ const obj = {
   }
 }
 
-const obj1 = deepClone(obj)
+const obj1 = ToolkitUseArray.deepClone(obj)
 </script>
 ```
 
