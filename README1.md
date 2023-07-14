@@ -81,3 +81,6 @@ https://juejin.cn/post/7220591668042563644
 1. 搞多环境打包
 2. 实现 pnpm mo 分包，分项目
 3. 加入不同命名空间，让方法导出更加规范
+
+
+https://dev.to/yakult/a-concise-hardhat-tutorial-part-1-7eo
