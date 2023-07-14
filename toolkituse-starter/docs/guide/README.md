@@ -50,3 +50,6 @@ import {
 } from 'toolkit-use'
 </script>
 ```
+
+## 测试报告
+![](../imgs/test.png)
