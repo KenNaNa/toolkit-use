@@ -84,3 +84,15 @@ https://juejin.cn/post/7220591668042563644
 
 
 https://dev.to/yakult/a-concise-hardhat-tutorial-part-1-7eo
+
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module E:\toolkit-use\node_modules\string-width\index.js from E:\toolkit-use\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in E:\toolkit-use\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+    at Object.<anonymous> (E:\toolkit-use\node_modules\cliui\build\index.cjs:291:21)
+    at Object.<anonymous> (E:\toolkit-use\node_modules\yargs\build\index.cjs:2861:12)
+    at Object.<anonymous> (E:\toolkit-use\node_modules\yargs\index.cjs:5:30)
+    at _yargs (E:\toolkit-use\node_modules\jest-cli\build\cli\index.js:40:39)
+    at buildArgv (E:\toolkit-use\node_modules\jest-cli\build\cli\index.js:177:20)
+    at Object.run (E:\toolkit-use\node_modules\jest-cli\build\cli\index.js:147:18)
+    at Object.<anonymous> (E:\toolkit-use\node_modules\jest-cli\bin\jest.js:16:17)
+    at Object.<anonymous> (E:\toolkit-use\node_modules\jest\bin\jest.js:12:3)

@@ -80,10 +80,11 @@ const hasStorage = (key) => {
 // 获取所有key
 
 const getStorageKeys = () => {
-  let items = getStorageAll()
-  let keys = []
+  let items = getStorageAll() as any[]
+  let keys = [] as any[]
   for (let index = 0; index < items.length; index++) {
-    keys.push(items[index].key)
+    let key = items[index].key as any
+    keys.push(key)
   }
   return keys
 }
