@@ -33,7 +33,7 @@ describe('日期工具测试', () => {
   })
 
   test('测试获取今天日期', () => {
-    const date = '2023-07-14'
+    const date = '2023-07-15'
     expect(ToolkitUseDate.getToday('yyyy-mm-dd')).toBe(date)
   })
 
