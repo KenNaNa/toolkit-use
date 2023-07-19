@@ -26,10 +26,17 @@ module.exports = {
     ],
     sidebar: {
       '/guide/': [
-        ['', '介绍'],
+        ['', '工具介绍'],
         {
-          title: '工具',
-          collapsable: false,
+          title: '如何贡献',
+          collapsable: true,
+          children: [
+            ['./CONTRIBUTING.md', '往下看'],
+          ]
+        },
+        {
+          title: '工具方法',
+          collapsable: true,
           children: [
             ['./clipboard/clipboard.md', '复制'],
             ['./array/array.md', '数组'],
@@ -42,6 +49,13 @@ module.exports = {
             ['./shared/shared.md', '共享方法'],
             ['./dom/dom.md', 'dom工具'],
             ['./storage/storage.md', 'storage工具'],
+          ]
+        },
+        {
+          title: '问题反馈',
+          collapsable: true,
+          children: [
+            ['./problems/problems.md', '各大问题'],
           ]
         }
       ],
