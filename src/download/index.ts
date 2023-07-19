@@ -11,7 +11,7 @@ export const ToolkitUseDownload: IToolkitUseDownload = {
     a.style.display = 'none'
     document.body.appendChild(a)
     a.click()
-    a.remove()
+    document.body.removeChild(a)
   },
   /**
  * @description: 处理后端数据流下载 excel 表格, pdf
