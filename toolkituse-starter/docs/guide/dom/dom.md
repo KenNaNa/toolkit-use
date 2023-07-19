@@ -72,3 +72,14 @@ ToolkitUseDom.getViewport()
 import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.outputAttributes(elem)
 ```
+
+## 平滑滚动函数
+```ts
+/**
+ * 平滑滚动函数
+ * 当存在目标锚点时滚动至锚点位置
+ * 否则返回顶部
+ */
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
+ToolkitUseDom.scrollToAims(elem)
+```

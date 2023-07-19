@@ -220,6 +220,42 @@ function outputAttributes(element) {
 }
 
 
+/**
+ * 平滑滚动函数
+ * 当存在目标锚点时滚动至锚点位置
+ * 否则返回顶部
+ */
+function scrollToAims(element) {
+  const cubic = (value) => value ** 3
+  const easeInOutCubic = (value) =>
+    value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2
+  const EL = document.documentElement
+  const BEGIN_TIME = Date.now() // 开始滚动时间
+  const BEGIN_VALUE = EL.scrollTop // 当前滚动条位置
+  const TO_VAL = element ? element.offsetTop - 60 : null // 是否存在目标位置,当存在目标位置时，减去头部高度
+  const RAF = window.requestAnimationFrame || ((func) => setTimeout(func, 16))
+  const frameFunc = () => {
+    const PROGRESS = (Date.now() - BEGIN_TIME) / 500
+    if (PROGRESS < 1) {
+      /**
+       * 若存在滚动条目标位置，则滚动至目标位置
+       * 否则滚动到顶部
+       */
+      EL.scrollTop = TO_VAL
+        ? BEGIN_VALUE + (TO_VAL - BEGIN_VALUE) * easeInOutCubic(PROGRESS)
+        : BEGIN_VALUE * (1 - easeInOutCubic(PROGRESS))
+      RAF(frameFunc)
+    } else {
+      EL.scrollTop = TO_VAL || 0
+    }
+  }
+  RAF(frameFunc)
+}
+
+
+
+
+
 export const ToolkitUseDom = {
   getColor,
   addHandler: eventUtils.addHandler,
@@ -239,4 +275,5 @@ export const ToolkitUseDom = {
   getOffset,
   getViewport,
   outputAttributes,
+  scrollToAims,
 }

@@ -59,23 +59,3 @@ import {
 ## clip
 
 ![](./toolkituse-starter/docs/imgs/clip.png)
-
-
-## array
-
-
-## date 
-
-
-## decimal
-
-
-## download
-
-
-## string
-
-
-## eventhub
-
-## regex
