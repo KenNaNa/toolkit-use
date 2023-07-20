@@ -58,7 +58,14 @@ module.exports = {
           children: [
             ['./problems/problems.md', '各大问题'],
           ]
-        }
+        },
+        {
+          title: '版本更新',
+          collapsable: true,
+          children: [
+            ['./CHANGELOG.md', '往下看'],
+          ]
+        },
       ],
     },
   },
