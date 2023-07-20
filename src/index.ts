@@ -9,6 +9,8 @@ import { ToolkitUseRegex } from './regex/index'
 import { ToolkitUseDom } from './dom/index'
 import { ToolkitUseStorage } from './storage'
 
+
+
 export {
   ToolkitUseClipboard,
   ToolkitUseClipboardOptions,
