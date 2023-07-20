@@ -1,5 +1,7 @@
 
 
+## [0.1.1](https://github.com/KenNaNa/toolkit-use/compare/0.1.0...0.1.1) (2023-07-20)
+
 # 0.1.0 (2023-07-20)
 
 
