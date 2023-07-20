@@ -1,0 +1,19 @@
+{
+  "name": "toolkituse-starter",
+  "version": "0.0.1",
+  "description": "a npm toolkit use docs",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:deploy": "bash deploy.sh"
+  },
+  "author": "kennana",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "element-plus": "^2.3.7"
+  }
+}
