@@ -49,20 +49,22 @@ const buildRollupOptions =  (filePathArr) => {
     rollupOptions.push({
       input: resolvePath(`.${item}`),
       output: {
-        file: item.replace('/src', 'dist').replace('index.ts', `index.esm.js`),
+        file: item.replace('/src', 'dist').replace('index.ts', `index.min.esm.js`),
         format: 'esm',
         banner,
         name: `${item}`,
+        sourcemap: true
       },
       plugins,
     })
     rollupOptions.push({
       input: resolvePath(`.${item}`),
       output: {
-        file: item.replace('/src', 'dist').replace('index.ts', `index.umd.js`),
+        file: item.replace('/src', 'dist').replace('index.ts', `index.min.umd.js`),
         format: 'umd',
         banner,
         name: `${item}`,
+        sourceMap: true,
       },
       plugins,
     })
@@ -71,7 +73,7 @@ const buildRollupOptions =  (filePathArr) => {
 }
 // 读取文件
 const fileDisplay = (filePath) => {
-  readdirSync = fs.readdirSync(filePath)
+  const readdirSync = fs.readdirSync(filePath)
   readdirSync.forEach((filename) => {
     //获取当前文件的绝对路径
     if(filename !== 'index.ts') {

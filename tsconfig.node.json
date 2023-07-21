@@ -6,4 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true // 解析json模块
   },
+  "include": [
+    "./package.json",
+  ],
 }
