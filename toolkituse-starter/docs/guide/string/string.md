@@ -1,12 +1,10 @@
 ## 前补零示例
-```vue
-<script setup lang="ts">
+```ts
 import { ToolkitUseString } from "toolkit-use/dist/string/index.esm"
 
 let str = 12
 
 str = ToolkitUseString.padStartZero(str, 3)
-</script>
 ```
 
 ### padStartZero 参数说明

@@ -1,6 +1,5 @@
 ## 对象数组去重示例
-```vue
-<script setup lang="ts">
+```ts
 import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
@@ -28,14 +27,12 @@ const optionsArr = [
 ]
 
 const arr = ToolkitUseArray.uniqueOptionsArr(optionsArr, 'id')
-</script>
 ```
 
 
 ## 单值数组去重示例
 
-```vue
-<script setup lang="ts">
+```ts
 import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
@@ -56,13 +53,11 @@ const optionsArr = [
 ]
 
 const arr = ToolkitUseArray.uniqueValueArr(optionsArr)
-</script>
 ```
 
 ## 深复制示例
 
-```vue
-<script setup lang="ts">
+```ts
 import { ToolkitUseArray } from "toolkit-use/dist/array/index.esm"
 
 // 目前的需求就是想去掉 id 重复的
@@ -90,7 +85,6 @@ const obj = {
 }
 
 const obj1 = ToolkitUseArray.deepClone(obj)
-</script>
 ```
 
 ## uniqueOptionsArr 参数说明

@@ -1,7 +1,6 @@
 ## 常用正则表达式
 
-```vue
-<script setup lang="ts">
+```ts
 import { ToolkitUseRegex } from 'toolkit-use/dist/regex/index.esm'
  const {
   // 有效数字检测
@@ -37,5 +36,4 @@ import { ToolkitUseRegex } from 'toolkit-use/dist/regex/index.esm'
   // 汉字正则
   hanziReg,
  } = ToolkitUseRegex
-</script>
 ```

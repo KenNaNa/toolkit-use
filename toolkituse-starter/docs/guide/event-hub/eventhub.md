@@ -1,6 +1,5 @@
 ## 事件总线示例
-```vue
-<script setup lang="ts">
+```ts
 import { useEventHub } from 'toolkit-use/dist/event-hub/index.esm'
 const events = useEventHub()
 const focus = () => console.log('专注')
@@ -8,5 +7,4 @@ const focus = () => console.log('专注')
 events.on('focus', focus)
 events.emit('focus', '专注')
 events.off('focus', focus)
-</script>
 ```

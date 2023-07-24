@@ -53,7 +53,6 @@ const buildRollupOptions =  (filePathArr) => {
         format: 'esm',
         banner,
         name: `${item}`,
-        sourcemap: true
       },
       plugins,
     })
@@ -64,7 +63,6 @@ const buildRollupOptions =  (filePathArr) => {
         format: 'umd',
         banner,
         name: `${item}`,
-        sourceMap: true,
       },
       plugins,
     })
