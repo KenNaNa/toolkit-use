@@ -17,8 +17,9 @@
     "vue3"
   ],
   "scripts": {
+    "build:types": "tsc -b ./tsconfig.types.json",
     "serve": "rollup -c -w",
-    "build": "rimraf dist/ && rollup -c",
+    "build": "rimraf dist/ && npm run build:types && rollup -c -w",
     "test": "jest --no-cache --coverage --verbose -u",
     "test:watch": "jest --no-cache --watch --config jest.config.js",
     "test:watchAll": "jest --no-cache  --watchAll --config jest.config.js",

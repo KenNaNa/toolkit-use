@@ -1,5 +1,4 @@
-import { IToolkitUseDate } from "../../types/date"
-export const ToolkitUseDate: IToolkitUseDate = {
+export const ToolkitUseDate = {
   /**
  * 日期时间格式化函数
  * @param dateObj {Date} date实例

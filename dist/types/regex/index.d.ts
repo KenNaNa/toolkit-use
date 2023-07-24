@@ -1,0 +1,20 @@
+export declare const ToolkitUseRegex: {
+    significantDigitsReg: RegExp;
+    chineseRealNameReg: RegExp;
+    identificationCardReg: RegExp;
+    identificationCardRegO: RegExp;
+    phoneReg: RegExp;
+    cryptographicStrengthReg: RegExp;
+    emailReg: RegExp;
+    emailRegO: RegExp;
+    urlReg: RegExp;
+    ipV4Reg: RegExp;
+    colorReg: RegExp;
+    dateReg: RegExp;
+    qqReg: RegExp;
+    wxReg: RegExp;
+    carReg: RegExp;
+    hanziReg: RegExp;
+    hyphenateRE: RegExp;
+    camelizeRE: RegExp;
+};

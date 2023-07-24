@@ -1,5 +1,4 @@
-import { IToolkitUseArray } from "../../types/array"
-export const ToolkitUseArray: IToolkitUseArray = {
+export const ToolkitUseArray = {
   /**
  * @description: 对象数组去重
  * @param {any} arr 对象数组

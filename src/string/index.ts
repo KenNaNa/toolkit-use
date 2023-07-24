@@ -1,5 +1,4 @@
-import { IToolkitUseString } from "../../types/string"
-export const ToolkitUseString: IToolkitUseString = {
+export const ToolkitUseString = {
   /**
  * @description: 数字前面补0
  * @param {string|number} str 字符串或者数字

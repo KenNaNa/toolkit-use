@@ -1,5 +1,4 @@
-import { IToolkitUseDecimal } from "../../types/decimal"
-export const ToolkitUseDecimal: IToolkitUseDecimal = {
+export const ToolkitUseDecimal = {
   /**
  * 四舍五入，保留指定小数位数，当原始数据不满足长度时，不要补 0
  * @param number [Number | String] 原始数据，支持字符串和数值型

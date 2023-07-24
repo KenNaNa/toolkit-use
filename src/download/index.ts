@@ -1,5 +1,4 @@
-import { IToolkitUseDownload } from "../../types/dowload"
-export const ToolkitUseDownload: IToolkitUseDownload = {
+export const ToolkitUseDownload = {
   /**
  * @description: 接口返回下载链接
  * @param {string} url
