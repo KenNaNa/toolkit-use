@@ -9,10 +9,8 @@ module.exports = {
       {
         text: 'versions',
         items: [
-          { text: '0.0.14', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.14', target: '_blank' },
-          { text: '0.0.13', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.13', target: '_blank' },
-          { text: '0.0.12', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.12', target: '_blank' },
-          { text: '0.0.11', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.11', target: '_blank' },
+          { text: '0.0.19', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.19', target: '_blank' },
+          { text: '0.0.18', link: 'https://www.npmjs.com/package/toolkit-use/v/0.0.18', target: '_blank' },
         ]
       },
       {
