@@ -4,29 +4,61 @@ import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 const color = ToolkitUseDom.getColor()
 ```
 
-## 事件工具
-
+## 监听事件
 ```ts
 import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
-// 添加监听
 ToolkitUseDom.addHandler(element, type, handler)
-// 移除监听
+```
+
+## 移除监听
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.removeHandler(element, type, handler)
-// 获取兼容性事件
+```
+## 获取兼容性事件
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getEvent(event)
-// 获取实际目标
+```
+## 获取实际目标
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getTarget(event)
-// 阻止默认事件
+```
+
+## 阻止默认事件
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.preventDefault(event)
-// 阻止冒泡
+```
+
+## 阻止冒泡
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.stopPropagation(event)
-// 获取相对目标
+```
+
+## 获取相对目标
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getRelatedTarget(event)
-// 获取按钮对应的数字
+```
+
+## 获取按钮对应的数字
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getButton(event)
-// 获取滚轮
+```
+
+## 获取滚轮
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getWheelDelta(event)
-// 获取chatCode
+```
+
+## 获取chatCode
+```ts
+import { ToolkitUseDom } from 'toolkit-use/dist/dom/index.esm'
 ToolkitUseDom.getCharCode(event)
 ```
 

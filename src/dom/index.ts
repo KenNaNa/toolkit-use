@@ -112,7 +112,6 @@ const eventUtils = {
  * @description: 添加类名
  * @param {*} elem 元素
  * @param {*} classN 类名
- * @return {*}
  */
 function addClass(elem, classN) {
   // 对传参进来的类名进行切割
@@ -199,11 +198,11 @@ function getViewport() {
   }
 }
 
-//遍历元素的属性函数
-//兼容IE7之前
-//每个特性节点都有一个名为 specified 的属性，这个属性的值如果为 true，
-//则意味着要么是在 HTML 中指定了相应特性，
-//attributes[i]获取的是属性节点
+// 遍历元素的属性函数
+// 兼容IE7之前
+// 每个特性节点都有一个名为 specified 的属性，这个属性的值如果为 true，
+// 则意味着要么是在 HTML 中指定了相应特性，
+// attributes[i]获取的是属性节点
 function outputAttributes(element) {
   var attrName,
     attrValue,
