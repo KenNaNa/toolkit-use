@@ -114,7 +114,7 @@ const toNumber = (val: any) => {
 function isPlainObject(obj: any) {
   if (typeof obj !== 'object' || obj === null) return false
 
-  let proto = Object.getPrototypeOf(obj)
+  const proto = Object.getPrototypeOf(obj)
   // 1. edge case Object.create(null)
   if (proto === null) return true
   let baseProto = proto
@@ -148,8 +148,8 @@ const toString = (val: any) => {
  */
 function toArray(list: any, start: any) {
   start = start || 0;
-  var i = list.length - start;
-  var ret = new Array(i);
+  let i = list.length - start;
+  let ret = new Array(i);
   while (i--) {
     ret[i] = list[i + start];
   }
@@ -159,7 +159,7 @@ function toArray(list: any, start: any) {
 
 // 将属性赋予目标对象
 function extend(to: any, _from: any) {
-  for (var key in _from) {
+  for (let key in _from) {
     to[key] = _from[key];
   }
   return to
@@ -171,8 +171,8 @@ function extend(to: any, _from: any) {
  * @return {*}
  */
 function toObject(arr: any) {
-  var res = {};
-  for (var i = 0; i < arr.length; i++) {
+  let res = {};
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i]) {
       extend(res, arr[i]);
     }
@@ -186,9 +186,9 @@ function toObject(arr: any) {
  * @return {*}
  */
 function cached(fn: any) {
-  var cache = Object.create(null);
+  let cache = Object.create(null);
   return (function cachedFn(str: any) {
-    var hit = cache[str];  // 进行缓存
+    let hit = cache[str];  // 进行缓存
     return hit || (cache[str] = fn(str))
   })
 }
@@ -236,9 +236,9 @@ function makeMap(
   str: any,
   expectsLowerCase: any
 ) {
-  var map = Object.create(null);
-  var list = str.split(',');
-  for (var i = 0; i < list.length; i++) {
+  let map = Object.create(null);
+  let list = str.split(',');
+  for (let i = 0; i < list.length; i++) {
     map[list[i]] = true;
   }
   return expectsLowerCase
@@ -256,13 +256,13 @@ function makeMap(
 const looseEqual = (a: any, b: any) => {
   // a、b恒等于，返回true
   if (a === b) { return true }
-  var isObjectA = isObject(a);
-  var isObjectB = isObject(b);
+  let isObjectA = isObject(a);
+  let isObjectB = isObject(b);
   // 判断是否为对象（引用类型）
   if (isObjectA && isObjectB) {
     try {
-      var isArrayA = Array.isArray(a);
-      var isArrayB = Array.isArray(b);
+      let isArrayA = Array.isArray(a);
+      let isArrayB = Array.isArray(b);
       if (isArrayA && isArrayB) {
         // 若两者为数组，当长度一致时再递归判断每个数据项，不一致时返回false
         return a.length === b.length && a.every(function (e: any, i: any) {
@@ -273,8 +273,8 @@ const looseEqual = (a: any, b: any) => {
         return a.getTime() === b.getTime()
       } else if (!isArrayA && !isArrayB) {
         // 若两者为对象，当长度一致时再递归判断每个属性值是否相同，不一致时返回false
-        var keysA = Object.keys(a);
-        var keysB = Object.keys(b);
+        let keysA = Object.keys(a);
+        let keysB = Object.keys(b);
         return keysA.length === keysB.length && keysA.every(function (key) {
           return looseEqual(a[key], b[key])
         })
@@ -302,7 +302,7 @@ const looseEqual = (a: any, b: any) => {
  */
 function remove(arr: any, item: any) {
   if (arr.length) {
-    var index = arr.indexOf(item);
+    let index = arr.indexOf(item);
     if (index > -1) {
       return arr.splice(index, 1)
     }

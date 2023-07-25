@@ -16,13 +16,6 @@ import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
 ToolkitUseShared.isPromise(val)
 ```
 
-## 转换为数字
-
-```ts
-import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
-ToolkitUseShared.toNumber(val)
-```
-
 ## The object to inspect
 ```ts
 import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
@@ -34,17 +27,6 @@ ToolkitUseShared.isPlainObject(obj)
 ```ts
 import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
 ToolkitUseShared.toString(val)
-```
-## 将类数组对象转换为数组
-```ts
-import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
-ToolkitUseShared.toArray(list, start)
-```
-
-## 将属性赋予目标对象
-```ts
-import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
-ToolkitUseShared.extend(to, _from)
 ```
 
 ## 将对象数组合并到对象中
@@ -76,11 +58,6 @@ ToolkitUseShared.camelize(str)
 ```ts
 import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
 ToolkitUseShared.remove(arr, item)
-```
-## 函数只执行一次
-```ts
-import { ToolkitUseShared } from 'toolkit-use/dist/shared/index.esm'
-ToolkitUseShared.once(fn)
 ```
 
 ## 检测数组

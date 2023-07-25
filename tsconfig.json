@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     /* 基本选项 */
-    "target": "ESNext", // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
-    "module": "ESNext", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "target": "ES2015", // 指定 ECMAScript 目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'
+    "module": "ES2015", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "useDefineForClassFields": true, // [[Define]] 语义
     "lib": [
-      "ESNext",
-      "dom"
+      "dom",
+      "ES2015.Promise"
     ], // 指定要包含在编译中的库文件
     // "composite": false, // 当前项目是否为子项目
     // "allowJs": true, // 允许编译 javascript 文件
